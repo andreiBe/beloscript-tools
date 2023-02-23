@@ -1,0 +1,98 @@
+{
+     "try": {
+          "prefix": "try",
+          "body": [
+               "try {",
+               "    $0",
+               "}"
+          ]
+     },
+     "catch": {
+          "prefix": "catch",
+          "body": [
+               "catch(e) {",
+               "    $0",
+               "}"
+          ]
+     },
+     "import": {
+          "prefix": "import",
+          "body": "import "
+     },
+     "export": {
+          "prefix": "export",
+          "body": "export "
+     },
+     "while": {
+          "prefix": "while",
+          "body": [
+               "while (${1:condition}) {",
+               "    $0",
+               "}"
+          ]
+     },
+     "return": {
+          "prefix": "return",
+          "body": "return"
+     },
+     "continue": {
+          "prefix": "continue",
+          "body": "continue"
+     },
+     "break": {
+          "prefix": "break",
+          "body": "break"
+     },
+     "function": {
+          "prefix": "function",
+          "body": "function "
+     },
+     "and": {
+          "prefix": "and",
+          "body": "and"
+     },
+     "in": {
+          "prefix": "in",
+          "body": "in"
+     },
+     "or": {
+          "prefix": "or",
+          "body": "or"
+     },
+     "not": {
+          "prefix": "not",
+          "body": "not"
+     },
+     "if": {
+          "prefix": "if",
+          "body":"if ($1) "
+     },
+     "else": {
+          "prefix": "else",
+          "body": "else "
+     },
+     "elif": {
+          "prefix": ["elif", "else if"],
+          "body": "elif ($1) "
+     },
+     "fori": {
+          "prefix": "fori",
+          "body": [
+               "for (${1:i} = 0 : ${1:i} < ${2:limit} : ${1:i}++) {",
+               "    $0",
+               "}"
+          ]
+     },
+     "for": {
+          "prefix": "for",
+          "body": [
+               "for (${1:item} in ${2:list}) {",
+               "    $0",
+               "}"
+          ]
+     },
+     "print": {
+          "prefix": "print",
+          "body": "print($0)"
+     }
+}

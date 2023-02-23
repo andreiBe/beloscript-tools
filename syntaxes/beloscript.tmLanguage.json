@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BeloScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#function-call"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.beloscript",
+				"match": "\\b(if|while|for|return|continue|break|else|elif|catch|try|export|function|import|and|in|or|not)\\b"
+			},
+			{
+				"name": "keyword.other",
+				"match": "\\b(false|true|null|self)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.beloscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.beloscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.beloscript",
+			"begin": "#",
+			"end": "\n"
+		},
+		"function-call": {
+			"name": "support.function",
+			"match": "\\b(\\w|_)+(?=\\()"
+		},
+		"numbers": {
+			"name": "keyword.other.unit",
+			"match": "\\b\\d+\\.?\\d*\\b"
+		}
+	},
+	"scopeName": "main.bel"
+}

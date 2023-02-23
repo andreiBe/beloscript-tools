@@ -1,0 +1,54 @@
+{
+    "name": "beloscript-tools",
+    "displayName": "BeloScript tools",
+    "description": "Language support for BeloScript",
+    "version": "1.0.0",
+    "publisher": "beloSoftware",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
+    "preview": true,
+    "icon": "icon.png",
+    "main": "./extension.js",
+    "contributes": {
+        "languages": [{
+            "id": "beloscript",
+            "aliases": ["BeloScript", "beloscript"],
+            "extensions": [".bel"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "beloscript",
+            "scopeName": "main.bel",
+            "path": "./syntaxes/beloscript.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+              "language": "beloscript",
+              "path": "./snippets.json"
+            }
+          ],
+        "commands": [{
+            "command": "beloscript.run",
+            "title": "BeloScript: Run"
+        }],
+        "configuration": {
+            "title": "BeloScript",
+            "properties": {
+                "beloscript.runlocation": {
+                    "type":"string",
+                    "default": "PATH",
+                    "description": "Path to BeloScript executable."
+                }
+            }
+        }
+    }
+}
