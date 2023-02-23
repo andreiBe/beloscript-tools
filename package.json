@@ -20,7 +20,7 @@
         "theme": "dark"
     },
     "preview": true,
-    "icon": "./icon.png",
+    "icon": "icon.png",
     "main": "./extension.js",
     "contributes": {
         "languages": [{
