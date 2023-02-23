@@ -7,6 +7,10 @@
     "engines": {
         "vscode": "^1.75.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andreiBe/beloscript-tools"
+    },    
     "categories": [
         "Programming Languages",
         "Snippets"
@@ -16,14 +20,18 @@
         "theme": "dark"
     },
     "preview": true,
-    "icon": "icon.png",
+    "icon": "./icon.png",
     "main": "./extension.js",
     "contributes": {
         "languages": [{
             "id": "beloscript",
             "aliases": ["BeloScript", "beloscript"],
             "extensions": [".bel"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./icon.png",
+                "dark": "./icon.png"
+            }
         }],
         "grammars": [{
             "language": "beloscript",
